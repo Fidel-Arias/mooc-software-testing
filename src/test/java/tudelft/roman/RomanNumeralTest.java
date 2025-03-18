@@ -33,4 +33,13 @@ public class RomanNumeralTest {
         int result = roman.convert("XLIV");
         Assertions.assertEquals(44, result);
     }
+
+    //Bug: Error de validación de numeros romanos incorrectos
+    @Test
+    public void InvalidNumbers() {
+        RomanNumeral roman = new RomanNumeral();
+//        int result1 = roman.convert("VX");
+        int result2 = roman.convert("XXC");
+        Assertions.assertEquals(180, result2);
+    }
 }
